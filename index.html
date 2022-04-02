@@ -9,11 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
     <body>     
     <header class="header">
-        <div class="container">
+        <div class="navbar" id="nav">
             <a class="linklogo" href="https://www.netflix.com/" target="_blank" ><h2 class="logo">NETFLIX</h2></a>
+            <div class="dropdown">
+                <button class="dropbtn">Navegar <i style="margin-left:3px" class="fa-solid fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Início</a>
+                  <a href="#">Séries</a>
+                  <a href="#">Filmes</a>
+                  <a href="#">Bombando</a>
+                  <a href="#">Minha lista</a>
+                </div>
+              </div>
             <nav>
                 <a href="#">Início</a>
                 <a href="#">Séries</a>
@@ -21,13 +32,19 @@
                 <a href="#">Bombando</a>
                 <a href="#">Minha lista</a>
             </nav>
+            <div class="spacing"></div>
+            <div class="icones">
+                <i style="margin-right: 35px;" class="fa-solid fa-magnifying-glass"></i>
+                <i style="margin-right: 35px;" class="fa-regular fa-bell"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
         </div>
     </header>
     
     <main>
         
         <div class="mainmovie">
-            <div class="spacing"></div>
+            <div class="spacing2"></div>
             <div class="tittle">
                 <div class="title"> 
                     <img class="imgtitle" src="img/AAAABcVSSCDIHEq9kGuFxmJJNmrySjvMsMenxIlz9cAN-USZ7Aj5vp4iHSVhjdgchX8TQvTvZR0e640p3yeyoJmR7n1OeYHfzbkUN08EAcbOFuRX-gEIse7Fb610EHH9mb5s1X8VfcMY0SosjllBuCsQFeSXlkgr9-_qcj204svmmDJ68g.webp">                
@@ -36,14 +53,13 @@
                     </div>  
                     <div class="buttons">
                         <button class="button" role="button"> 
-                            <img src="img/21606.png">
-                           <p>Assistir</p>
+                            <i class="fa-solid fa-play"></i>
+                            <p>Assistir</p>
                         </button>
                         <button class="button2" role="button">
-                            <img src="img/info.png">
+                            <img src="img/kindpng_4637164.png">
                             <p>Mais Informações</p>
                         </button>
-                        
                     </div> 
                 </div>
             </div>
@@ -51,6 +67,15 @@
         </div>
         
     </main>
-    <button role="button"> Mais informações </button>
+    <script> 
+    (function () {
+    var menu = document.getElementById('nav'); // colocar em cache
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 0) menu.classList.add('menuFixo'); // > 0 ou outro valor desejado
+        else menu.classList.remove('menuFixo');
+    });
+})();
+    </script>
+    <script src="https://kit.fontawesome.com/ab8c894531.js" crossorigin="anonymous"></script>
 </body>
 </html>
