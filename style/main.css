@@ -1,6 +1,7 @@
 :root {
     --red: #e50914;
     --preta: #141414;
+    
 }
 * {
     margin: 0;
@@ -11,12 +12,12 @@
 /*basic elements*/
 
 body {
-    box-shadow: 80px 40px 320px rgba(0,0,0,0.9) inset;
+    box-shadow: 40px 40px 120px rgba(0,0,0,0.9) inset;
     overflow-x: hidden;
-    background: var(--preta);
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(20, 20, 20);
+    color: #fff;
 }
+
 .navbar {
     width: 100%;
     height: 68px;
@@ -29,7 +30,6 @@ body {
     align-items: center;
 }
 .menuFixo {
-    box-shadow: 10px 10px 320px rgba(0,0,0,0.5) inset;
     background-color: rgb(20, 20, 20);
 }
 .dropdown {
@@ -38,7 +38,7 @@ body {
 .linklogo {
     text-decoration: none;
 }
-header .logo {
+.navbar  .logo {
     margin-left: 4vw;
     margin-right: 40px;
     color: var(--red);
@@ -46,17 +46,14 @@ header .logo {
     font-size: max(2.5vw,15px);
 }
 
-
-
-header nav a {
+.navbar  nav a {
     font-size: max(1.1vw,10px);
-    padding-right: 8px;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    margin-right: 10px;
+    margin-right: 18px;
 }
-header nav a:hover {
+.navbar nav a:hover {
     color: #aaa;
 } /*44vw*/
 .spacing {
@@ -70,13 +67,15 @@ header nav a:hover {
     margin-right: 60px;
 }
 
-/*main movie*/
+/*main movie 90vh*/
+main {
+    height: max(271px,42vw);
+}
 .mainmovie {
-    min-height: 100%;
-    box-shadow: 80px 80px 150px rgba(0,0,0,80) inset;
+    box-shadow: 10px 15px 150px 55px rgba(0,0,0,80) inset;
     background: url(../img/AAAABeYAtPBjkXfkv8w4Q-j--iJwrznikn4C5Vhza8Sh4HKtnJL2OFsY27HiH2FnZuAIsJ9jCuF1qu7paIb77s8Rfg1fqkTN.webp);
-    height: 700px;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -84,6 +83,7 @@ header nav a:hover {
 
     
 }
+
 .spacing2 {
     width: 1px;
     height: max(10px, 6vw);
@@ -91,11 +91,12 @@ header nav a:hover {
 /* 40vw=446 */
 .tittle {
     margin-left: 5vw;
-    width: max(45vw, 200px);
+    width: max(45vw, 100px);
     height: 120px;
 }
 
 .title {
+    
     font-size: max(1.2vw, 10px);
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -108,10 +109,11 @@ header nav a:hover {
     max-height: 100%;
 }
 .description {
+    font-size: max(100%);
     text-shadow: 4px 0px 4px #000000;
 } /*50px;   40px*/
 .buttons {
-    margin-top: max(3vh, 20px);
+    margin-top: max(1vh, 3px);
     height: 46px;
     display:inline-flex;
 }
@@ -129,7 +131,7 @@ header nav a:hover {
 .button2 {
     border: none;
     cursor: pointer;
-    background-color: rgba(109,109,110,0.5);
+    background-color: rgba(109,109,110,0.8);
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -140,10 +142,10 @@ header nav a:hover {
     
 }
 .button:hover {
-    opacity: 80%;
+    opacity: 60%;
 }
 .button2:hover {
-    opacity: 80%;
+    background-color: rgba(81, 81, 82, 0.6);
 }
 .playicon {
     height: 40px;
@@ -174,7 +176,22 @@ header nav a:hover {
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
+.carousel {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.carousel p {
+    margin-top: 10px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 
+}
+.box-film {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
 @media (max-width:885px) {
     
     .dropbtn {
@@ -217,15 +234,16 @@ header nav a:hover {
     .dropdown:hover .dropbtn {
         background-color: transparent;
     }
-    .header nav a {
+    .navbar nav a {
         display: none;
     }
     .navbar {
         height: 40px;
     }
-
-
-
+    .description {
+        font-size: max(80%);
+    }
+    
 
 
 }
